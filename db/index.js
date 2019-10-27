@@ -1,10 +1,10 @@
 const mysql = require('knex')({
   "client": "pg",
   "connection": {
-    "host": "localhost",
+    "host": "b2btoners.eu",
     "port": 5432,
-    "user": "postgres",
-    "password": "1234",
+    "user": "root",
+    "password": "12345",
     "database": "memory-game",
     "charset"   : 'utf8mb4'
   }
