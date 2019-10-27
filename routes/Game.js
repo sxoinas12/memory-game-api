@@ -9,9 +9,9 @@ class Game {
 		this.router = express.Router();
 
 		this.router.get("/test",(req,res,next) => {
-			res.send("Push Notifications Works")
+			res.send("Push Notifications 2")
 		})
-		
+
 
 		this.router.post('/init',(req,res,next) =>{
 			let cards = req.body.cards;
