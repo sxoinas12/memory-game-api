@@ -7,6 +7,12 @@ class Game {
 	constructor(){
 		this.perPage = 9;
 		this.router = express.Router();
+
+		this.router.get("/test",(req,res,next) => {
+			res.send("Push Notifications Works")
+		})
+		
+
 		this.router.post('/init',(req,res,next) =>{
 			let cards = req.body.cards;
 			cards = parseInt(cards)
