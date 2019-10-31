@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var Game = require('./routes/Game');
+var LookGame = require('./routes/LookGame');
+
 
 var app = express();
 app.use(function(req, res, next) {
@@ -20,6 +22,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/', Game.router);
+
+app.use('/lookgame', LookGame.router);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
